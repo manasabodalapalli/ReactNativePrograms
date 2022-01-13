@@ -2,7 +2,7 @@
 // https://aboutreact.com/custom-navigation-drawer-sidebar-with-image-and-icon-in-menu-options/
 
 import React from 'react';
-import { SafeAreaView,View, StyleSheet, Image, Text, Linking,} from 'react-native';
+import { SafeAreaView,View, StyleSheet, Image, Text, TouchableOpacity,} from 'react-native';
 import {  DrawerContentScrollView,  DrawerItemList,  DrawerItem,} from '@react-navigation/drawer';
 import images  from '../Components/images';
 
@@ -26,33 +26,47 @@ const CustomSidebarMenu = (props) => {
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
         <View style={styles.customItem}>
+        <TouchableOpacity style={styles.customStyle}>
         <Image source={images.appointmentsIcon} style={styles.iconStyle} />
         <Text style={styles.textStyle}> Appointments</Text>
+        </TouchableOpacity>
         </View>
         <View style={styles.customItem}>
+        <TouchableOpacity style={styles.customStyle}>
         <Image source={images.medicalIcon} style={styles.iconStyle} />
         <Text style={styles.textStyle}> Medical Records</Text>
+        </TouchableOpacity>
         </View>
         <View style={styles.customItem}>
+        <TouchableOpacity style={styles.customStyle}>
         <Image source={images.membershipIcon} style={styles.iconStyle} />
         <Text style={styles.textStyle}> Membership</Text>
+        </TouchableOpacity>
         </View>
         <View style={styles.linetxt}/>
         <View style={styles.customItem}>
+        <TouchableOpacity style={styles.customStyle}>
         <Image source={images.settingsIcon} style={styles.iconStyle} />
         <Text style={styles.textStyle}> Settings</Text>
+        </TouchableOpacity>
         </View>
         <View style={styles.customItem}>
+        <TouchableOpacity style={styles.customStyle}>
         <Image source={images.helpIcon} style={styles.iconStyle} />
         <Text style={styles.textStyle}> Help Center</Text>
+        </TouchableOpacity>
         </View>
         <View style={styles.customItem}>
+        <TouchableOpacity style={styles.customStyle}>
         <Image source={images.likeIcon} style={styles.iconStyle} />
         <Text style={styles.textStyle}> Like Us</Text>
+        </TouchableOpacity>
         </View>
         <View style={styles.customItem}>
+        <TouchableOpacity style={styles.customStyle}>
         <Image source={images.doctorIcon} style={styles.iconStyle} />
         <Text style={styles.textStyle}> Are you Doctor?</Text>
+        </TouchableOpacity>
         </View>
       </DrawerContentScrollView>
      
@@ -61,6 +75,9 @@ const CustomSidebarMenu = (props) => {
 };
 
 const styles = StyleSheet.create({
+  customStyle:{
+    flexDirection: 'row',
+  },
     profileview:{
        flexDirection: 'row', alignItems: 'center' ,marginTop:20,marginBottom:20,
     },

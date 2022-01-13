@@ -31,11 +31,11 @@ export default function HeaderHomePage({onPressButton,navigation}) {
   const styles = StyleSheet.create({
     container:{ 
         flexDirection: 'row', justifyContent: 'space-between',height: 50, 
-        backgroundColor:'#051563',
+        backgroundColor:'#242A76',
     },
     container1:{ 
       display: 'flex', flexDirection: 'row', justifyContent: 'space-between', 
-      height: 50, backgroundColor:'#FAFDFC'
+      height: 50, backgroundColor:'#FAFDFC',alignItems:'center'
   },
   Logo: {
       height: 20, width: 30, marginLeft:10, marginTop:20,

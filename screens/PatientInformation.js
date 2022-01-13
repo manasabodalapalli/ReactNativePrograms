@@ -16,7 +16,7 @@ const PatientInformation = ({navigation}) => {
   const [text4, onChangeText4] = useState();
   const [text5, onChangeText5] = useState();
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(null);
   const [items, setItems] = useState([
     {label: 'Female', value: 'Female'},
     {label: 'Male', value: 'Male'}
@@ -24,20 +24,20 @@ const PatientInformation = ({navigation}) => {
   const [open1, setOpen1] = useState(false);
   const [value1, setValue1] = useState(null);
   const [items1, setItems1] = useState([
-    {label: '5ft4', value: '5ft4',selected: true},
+    {label: '5ft4', value: '5ft4'},
     {label: '5ft5', value: '5ft5'}
   ]);
 
   const [open2, setOpen2] = useState(false);
   const [value2, setValue2] = useState(null);
   const [items2, setItems2] = useState([
-    {label: '50', value: '50',selected: true},
+    {label: '50', value: '50'},
     {label: '60', value: '60'}
   ]);
   const [open3, setOpen3] = useState(false);
   const [value3, setValue3] = useState(null);
   const [items3, setItems3] = useState([
-    {label: 'B+', value: 'B+',selected: true},
+    {label: 'B+', value: 'B+'},
     {label: 'A+', value: 'A+'}
   ]);
   const [open4, setOpen4] = useState(false);
@@ -60,7 +60,7 @@ const PatientInformation = ({navigation}) => {
   ]);
   
     return(
-      <ScrollView>
+      <ScrollView nestedScrollEnabled={true}>
         <SafeAreaView style={styles.container}>          
             <Text style={styles.text}>Patient Information</Text>           
             <View style={styles.viewtext}>
@@ -92,7 +92,7 @@ const PatientInformation = ({navigation}) => {
             dateIcon: { width:0, height:0,
             },
             dateInput: {
-              marginBottom:20,width:250,
+              marginBottom:20,borderColor:'#fff'
             },
           }}
           onDateChange={(date) => {
@@ -108,6 +108,8 @@ const PatientInformation = ({navigation}) => {
                     setValue={setValue}
                     setItems={setItems}
                     placeholder="Female"
+                    listMode="SCROLLVIEW" 
+                    dropDownDirection="TOP"
                     style={{  height: 40, width: 155, borderRadius:0}}
                     containerStyle={{height: 40,width: 155}}/>
             </View>
@@ -126,6 +128,8 @@ const PatientInformation = ({navigation}) => {
                     setValue={setValue1}
                     setItems={setItems1}
                     placeholder="5ft 4'"
+                    listMode="SCROLLVIEW" 
+                    dropDownDirection="TOP"
                     style={{  height: 40, width: 105, borderRadius:0}}
                     containerStyle={{height: 40,width: 105}}/>
                 <DropDownPicker
@@ -137,6 +141,8 @@ const PatientInformation = ({navigation}) => {
                     setValue={setValue2}
                     setItems={setItems2}
                     placeholder="50"
+                    listMode="SCROLLVIEW" 
+                    dropDownDirection="TOP"
                     style={{  height: 40, width: 105, borderRadius:0}}
                     containerStyle={{height: 40,width: 105}}/>
                     <DropDownPicker
@@ -148,6 +154,8 @@ const PatientInformation = ({navigation}) => {
                     setValue={setValue3}
                     setItems={setItems3}
                     placeholder="B+"
+                    listMode="SCROLLVIEW" 
+                    dropDownDirection="TOP"
                     style={{  height: 40, width: 105, borderRadius:0}}
                     containerStyle={{height: 40,width: 105}}/>
             </View>
@@ -167,6 +175,8 @@ const PatientInformation = ({navigation}) => {
                     setValue={setValue4}
                     setItems={setItems4}
                     placeholder="Country"
+                    listMode="SCROLLVIEW" 
+                    dropDownDirection="TOP"
                     style={{  height: 40, width: 155, borderRadius:0}}
                     containerStyle={{height: 40,width: 155}}/>
 
@@ -179,6 +189,8 @@ const PatientInformation = ({navigation}) => {
                     setValue={setValue5}
                     setItems={setItems5}
                     placeholder="State"
+                    listMode="SCROLLVIEW" 
+                    dropDownDirection="TOP"
                     style={{  height: 40, width: 155, borderRadius:0}}
                     containerStyle={{height: 40,width: 155}}/>
                   </View>
@@ -195,6 +207,8 @@ const PatientInformation = ({navigation}) => {
                     setValue={setValue6}
                     setItems={setItems6}
                     placeholder="City"
+                    listMode="SCROLLVIEW" 
+                    dropDownDirection="TOP"
                     style={{  height: 40, width: 155, borderRadius:0}}
                     containerStyle={{height: 40,width: 155}}/>
                     <TextInput style={styles.textinput}onChangeText={onChangeText5}
@@ -224,13 +238,13 @@ const PatientInformation = ({navigation}) => {
         flex:1, backgroundColor: "white",
     },
     checkboxInput:{
-        flexDirection:"row", marginTop:10, marginBottom: 20,
+        flexDirection:"row", marginTop:10, marginBottom: 20,marginLeft:22
     },
     viewcheckbox:{
-        flex: 1, justifyContent: 'center', alignItems: 'center'
+        flex: 1, justifyContent: 'center', alignItems: 'center', 
     },
     checkboxlabel: {
-        margin: 8, color: '#000', width:320
+         color: '#000', width:'85%',fontSize:13, marginTop:5
     },
     viewdropdown:{
         alignItems: "flex-start", justifyContent: "flex-start",flexDirection: "row", 
@@ -278,10 +292,10 @@ const PatientInformation = ({navigation}) => {
       color: '#000',textAlign: 'center', fontSize: 15, marginRight:35
     },
     textinput: {
-      height: 40, width:155, alignItems:'center', borderWidth:1, padding: 10,
+      height: 40, width:155, alignItems:'center', borderWidth:1, padding: 10,color: '#000'
     },
     textadress: {
-      height: 40, width:310, alignItems:'center', borderWidth:1, padding: 10,
+      height: 40, width:310, alignItems:'center', borderWidth:1, padding: 10,color: '#000',
       marginTop:10,  
     },
   });

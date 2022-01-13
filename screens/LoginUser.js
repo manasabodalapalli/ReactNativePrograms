@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView,View,Text,TextInput,Image,TouchableOpacity} from 'react-native';
+import {SafeAreaView,View,Text,TextInput,Image,TouchableOpacity,StyleSheet} from 'react-native';
 import Images  from '../Components/images';
 import ButtonComponent  from '../Components/ButtonComponent';
 import stylesComponent from '../Components/stylesComponent';
@@ -7,6 +7,7 @@ import stylesComponent from '../Components/stylesComponent';
 const LoginUser = ({navigation}) => {
   return(
     <SafeAreaView style={stylesComponent.container}>
+         <View style={styles.loginlview}>
         <Image 
             style={stylesComponent.Logo} 
             source={Images.logoIcon} 
@@ -29,10 +30,9 @@ const LoginUser = ({navigation}) => {
         
         <Text style={stylesComponent.text2}>A 6 digit OTP will be sent via SMS verify your</Text>
         <Text style={stylesComponent.text3}>mobile number & Email address !</Text>
-
         <ButtonComponent 
               btnTitle={'Submit'}
-              onPress={() => navigation.navigate("PatientInformation")}
+              onPress={() => navigation.navigate("HomePage")}
               style={stylesComponent.button}
         />
         <View style={stylesComponent.signupStyle}>
@@ -41,8 +41,15 @@ const LoginUser = ({navigation}) => {
                   <Text style={stylesComponent.textsignup}>Sign Up</Text>
             </TouchableOpacity>
         </View>
+        </View>
+        
    
     </SafeAreaView>
         );
   };  
   export default LoginUser;
+  const styles = StyleSheet.create({
+    loginlview:{
+     flex:1, margin:30
+    }
+    });

@@ -20,8 +20,6 @@ const styles = StyleSheet.create({
       justifyContent:'space-around',
       alignSelf: 'auto',
       borderRadius: 30,    
-      marginLeft:20,
-      marginRight:20,
       fontSize:18,
       textAlign:'center',
       padding:10,

@@ -5,6 +5,7 @@ const images = {
 	phoneimg:require('../assets/smartphone3x.png'),
 	backgroundimg : require('../assets/blue-coueve-bg0.png'),
 	backgroundimg1 : require('../assets/blue-coueve-bg.png'),
+	backgroundimg2 : require('../assets/healthTourist.png'),
 	img : require('../assets/homeLogo2x.png'),
 	imgchat : require('../assets/chatpicnew.png'),
 	imgaudio : require('../assets/home-audio-ico.png'),

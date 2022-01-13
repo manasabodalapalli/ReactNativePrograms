@@ -9,7 +9,9 @@ class ScrollImage extends Component {
         return (
         <ScrollView  horizontal={true}
             showsHorizontalScrollIndicator={false}
-            pagingEnabled={true}>
+            pagingEnabled={true}
+            style={styles.scrollcontainer}
+          >
               {
                     datalist.map(item=><View key={item.id} style={styles.svgcontainer}>
                         <View style={styles.svgview}>
@@ -27,13 +29,12 @@ class ScrollImage extends Component {
 export default ScrollImage;
 
 const styles = StyleSheet.create({
-    containerlist:{
-      marginTop: 50, justifyContent: 'center', alignItems: 'center',
-      height: 120, width: '98%',borderColor: '#AED6F1',
-      backgroundColor: '#F5FCFF',borderRadius:10,borderwidth:1
-   },
+    scrollcontainer:{
+        flex:1,width: '100%',marginLeft: 15,marginRight: 15,
+    },
+    
     svgcontainer: {
-      height: 120, width: 120, marginLeft: 10, borderWidth: 1, 
+      height: 120, width: 120, marginLeft: 14, borderWidth: 1, marginRight: 14,flex:1,
       borderColor: '#AED6F1' ,backgroundColor:'#D6EAF8',alignItems:'center',
       resizeMode: 'cover',justifyContent: 'center',borderRadius:10
   },

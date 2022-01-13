@@ -32,20 +32,21 @@ const styles = StyleSheet.create({
    flex:1, backgroundColor:'#FAFDFC'
   },
   carouselview:{
-      width:'95%', margin:10,flex: 4,alignItems:'center',justifyContent: 'center', 
-      resizeMode: 'cover',marginTop:10 
+      flex: 6,alignItems:'center',justifyContent: 'center',resizeMode: 'contain',
+     width:'100%',
   },
   image: {
     width: 10, height: 10, borderColor: 'red', borderWidth: 2, borderRadius: 75
   },
   text: {
-    color: '#4B63B6', textAlign: 'center', alignItems: 'center', fontSize: 18, marginTop:15,  
+    color: '#4B63B6', textAlign: 'center', alignItems: 'center', fontSize: 18, marginTop:15, 
+     
   },
   text1: {
     color: '#57585C',textAlign: 'center', alignItems: 'center', fontSize: 18, marginTop:15,  
   },
   Logo: {
-    height: 50, width: 80, marginLeft:20, marginTop:20, borderColor:"#000"
+    height: 50, width: 80, marginLeft:30, marginTop:30, borderColor:"#000"
   },
   imageIcon:{
     marginLeft:50, alignItems:'center', justifyContent:'center',

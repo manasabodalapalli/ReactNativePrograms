@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Image, Text, View, Dimensions, ScrollView,Button } from "react-native";
+import { ScrollView, StyleSheet, Image, Text, View, Dimensions, FlatList,Button } from "react-native";
 import images from './data';
 
 const window = Dimensions.get('window').width;
@@ -30,7 +30,6 @@ export default class BackgroundCarousel extends Component {
          {
             images.map(item=><View key={item.id} style={styles.imagescontainer}>
                         <Image style={styles.svgview} source={item.imgUrl}>
-                      
                         </Image>
                         <View style={styles.svgtxtview}>
                         <Text style={styles.svgtxt}>{item.title}</Text>
@@ -57,7 +56,12 @@ export default class BackgroundCarousel extends Component {
 
 const styles = StyleSheet.create({
   container: {
-   height:'100%', width:'100%',backgroundColor:'#F8F9FC'
+   height:'100%', backgroundColor:'#F9FCFB',alignItems:'center',justifyContent: 'center', 
+   width:'80%'
+  },
+  imagescontainer:{
+    height:'100%', backgroundColor:'#F9FCFB',alignItems:'center',justifyContent: 'center', 
+    marginLeft:9
   },
   pagingtext:{
     color:'#888', margin:3
@@ -66,18 +70,18 @@ const styles = StyleSheet.create({
     color:'#10FCD8', margin:3,
   },
   circleimg:{ 
-    position:'absolute',bottom:10,flexDirection:'row', alignSelf:'center'
+    position:'absolute',bottom:15,flexDirection:'row', alignSelf:'center',marginTop:20
   },
   svgcontainer: {
-    width: 320, backgroundColor:'#F8F9FC',alignItems:'center',resizeMode: 'cover',
+    backgroundColor:'#F8F9FC',alignItems:'center',resizeMode: 'contain',
     justifyContent: 'center',borderRadius:10
 },
 svgview: { 
     flex:2,alignItems:'center',justifyContent: 'center', resizeMode: 'contain',
-    width: 320,marginLeft: 10,
+   
 },
 svgtxtview: { 
-  flex:1,
+  flex:1,   
 },
 svgtxt: { 
   fontSize: 18, color:'#062FF9', margin:10, textAlign: 'center',fontFamily:'varadana'

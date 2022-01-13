@@ -12,10 +12,10 @@ const stylesComponent = StyleSheet.create({
          width: 10, height: 10, borderColor: 'red', borderWidth: 2, borderRadius: 75
        },
      text: {
-       color: '#000', fontSize: 25, marginLeft:30, marginTop:30, fontWeight:'bold'
+       color: '#000', fontSize: 25,  marginTop:30, fontWeight:'bold'
      },    
      text1: {
-       color: '#57585C', fontSize: 16, marginTop:10, marginLeft:30,  
+       color: '#57585C', fontSize: 15, marginTop:10, 
      },
      text2: {
        color: '#57585C', fontSize: 14, marginTop:20, textAlign: 'center', alignItems: 'center', 
@@ -31,15 +31,15 @@ const stylesComponent = StyleSheet.create({
       color: '#051E7F',fontSize: 14,marginLeft:5, fontWeight:'bold'
     },
      Logo:{
-       height: 50, width: 80, marginLeft:20, marginTop:20,
+       height: 50, width: 80, marginTop:10
      },
      SectionStyle: {
        flexDirection: 'row', justifyContent: 'center', alignItems: 'center',borderWidth: 0.5,
-       backgroundColor: '#FAFDFC', borderColor: '#57585C', height: 50, width:300,
-       marginLeft:30, marginTop:30, color: '#000',
+       backgroundColor: '#FAFDFC', borderColor: '#57585C', height: 50, width:'100%',
+       marginTop:30, color: '#000',
    },  
    textinput: {
-     flex: 1,
+     flex: 1,  color: '#000',width:250,
    },
    ImageStyle: {
       padding: 10,margin: 10, height: 30,width: 13, resizeMode: 'stretch',
